@@ -391,27 +391,17 @@
     }
 
     .photo-frame {
-      position: relative;
       border-radius: 4px;
       overflow: hidden;
       box-shadow: 0 14px 32px rgba(34, 36, 34, 0.16);
     }
 
-    .img-note {
-      position: absolute;
-      right: 8px;
-      bottom: 6px;
-      z-index: 3;
-      font-size: 9px;
-      line-height: 1;
-      letter-spacing: 0.04em;
-      color: rgba(244, 241, 233, 0.65);
-      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.75);
-      pointer-events: none;
-    }
-
-    .hero-desktop-note {
-      display: none;
+    .footer-note {
+      width: 100%;
+      font-size: 0.68rem;
+      color: var(--concrete-gray);
+      opacity: 0.78;
+      margin-top: 4px;
     }
 
     /* Section 3: OUR BEER (Deep Forest Green) */
@@ -515,7 +505,6 @@
       .header-inner { padding: 14px 24px; }
       .wordmark { font-size: 1.4rem; }
       .hero-mobile-visual { display: none; }
-      .hero-desktop-note { display: block; right: 16px; bottom: 12px; }
       .hero-desktop-logo {
         display: block;
         width: 220px;
@@ -593,11 +582,7 @@
           <img src="images/sloth-logo-paper.png" alt="Sloth" />
           <span>CRAFT BEER BAR</span>
         </div>
-        <span class="img-note" data-lang="ja">※画像はイメージです</span>
-        <span class="img-note" data-lang="en">*Image for illustrative purposes.</span>
       </div>
-      <span class="img-note hero-desktop-note" data-lang="ja">※画像はイメージです</span>
-      <span class="img-note hero-desktop-note" data-lang="en">*Image for illustrative purposes.</span>
       <div class="hero-inner">
         <div class="hero-content">
           <img src="images/sloth-logo-paper.png" class="hero-desktop-logo" alt="Sloth" />
@@ -673,8 +658,6 @@
 
         <div class="photo-frame">
           <img src="images/about-light.jpg" alt="自然光と植物の影が落ちるコンクリート壁" />
-          <span class="img-note" data-lang="ja">※画像はイメージです</span>
-          <span class="img-note" data-lang="en">*Image for illustrative purposes.</span>
         </div>
       </div>
     </section>
@@ -701,8 +684,6 @@
 
         <div class="photo-frame">
           <img src="images/flight-beer.jpg" alt="木製ボードに並ぶ3種類のクラフトビールフライト" />
-          <span class="img-note" data-lang="ja">※画像はイメージです</span>
-          <span class="img-note" data-lang="en">*Image for illustrative purposes.</span>
         </div>
       </div>
     </section>
@@ -717,6 +698,8 @@
       <div class="footer-links">
         <a href="https://www.instagram.com/sloth.tokyo/" target="_blank" rel="noopener noreferrer">Instagram @sloth.tokyo</a>
       </div>
+      <p class="footer-note" data-lang="ja">※掲載中の画像はすべてイメージです。</p>
+      <p class="footer-note" data-lang="en">*All images shown are for illustrative purposes.</p>
     </div>
   </footer>
 
