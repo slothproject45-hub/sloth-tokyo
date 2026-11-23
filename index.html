@@ -184,12 +184,12 @@
     .hero-mobile-visual {
       display: block;
       width: 100%;
-      height: 245px;
+      height: 255px;
       overflow: hidden;
       position: relative;
     }
 
-    .hero-mobile-visual img {
+    .hero-mobile-visual .hero-bg-img {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -200,7 +200,38 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(180deg, rgba(34, 36, 34, 0.05) 65%, rgba(34, 36, 34, 0.96) 100%);
+      background:
+        linear-gradient(90deg, rgba(34, 36, 34, 0.78) 0%, rgba(34, 36, 34, 0.25) 58%, rgba(34, 36, 34, 0.05) 100%),
+        linear-gradient(180deg, rgba(34, 36, 34, 0.08) 62%, rgba(34, 36, 34, 0.96) 100%);
+    }
+
+    .hero-mobile-brand {
+      position: absolute;
+      left: 20px;
+      bottom: 24px;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+    }
+
+    .hero-mobile-brand img {
+      width: 176px;
+      height: auto;
+      filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.55));
+    }
+
+    .hero-mobile-brand span {
+      font-size: 0.66rem;
+      letter-spacing: 0.22em;
+      color: var(--golden-yellow);
+      font-weight: 600;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.65);
+    }
+
+    .hero-desktop-logo {
+      display: none;
     }
 
     .hero-inner {
@@ -466,6 +497,13 @@
       .header-inner { padding: 14px 24px; }
       .wordmark { font-size: 1.4rem; }
       .hero-mobile-visual { display: none; }
+      .hero-desktop-logo {
+        display: block;
+        width: 220px;
+        height: auto;
+        margin-bottom: 18px;
+        filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.45));
+      }
       .hero {
         min-height: 86vh;
         display: flex;
@@ -531,10 +569,15 @@
     <!-- 1. Hero -->
     <section class="hero">
       <div class="hero-mobile-visual">
-        <img src="images/hero.jpg" alt="木のカウンターに置かれた一杯のクラフトビール" />
+        <img src="images/hero.jpg" class="hero-bg-img" alt="木のカウンターに置かれた一杯のクラフトビール" />
+        <div class="hero-mobile-brand">
+          <img src="images/sloth-logo-paper.png" alt="Sloth" />
+          <span>CRAFT BEER BAR</span>
+        </div>
       </div>
       <div class="hero-inner">
         <div class="hero-content">
+          <img src="images/sloth-logo-paper.png" class="hero-desktop-logo" alt="Sloth" />
           <p class="hero-eyebrow">OPENING APRIL 2028 (TARGET) — EAST TOKYO</p>
 
           <h1 class="hero-title" data-lang="ja">
